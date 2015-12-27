@@ -14,6 +14,8 @@
 		9A79E1B41C3001A800E0397A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A79E1B21C3001A800E0397A /* LaunchScreen.storyboard */; };
 		9A79E1BF1C3001A800E0397A /* HealthcareToyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A79E1BE1C3001A800E0397A /* HealthcareToyTests.swift */; };
 		9A79E1CA1C3001A800E0397A /* HealthcareToyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A79E1C91C3001A800E0397A /* HealthcareToyUITests.swift */; };
+		9A79E1D81C300BBA00E0397A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A79E1D71C300BBA00E0397A /* LoginViewController.swift */; };
+		9A79E1DA1C300BD100E0397A /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A79E1D91C300BD100E0397A /* SignupViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		9A79E1C51C3001A800E0397A /* HealthcareToyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HealthcareToyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A79E1C91C3001A800E0397A /* HealthcareToyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthcareToyUITests.swift; sourceTree = "<group>"; };
 		9A79E1CB1C3001A800E0397A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9A79E1D71C300BBA00E0397A /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		9A79E1D91C300BD100E0397A /* SignupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +107,8 @@
 				9A79E1B01C3001A800E0397A /* Assets.xcassets */,
 				9A79E1B21C3001A800E0397A /* LaunchScreen.storyboard */,
 				9A79E1B51C3001A800E0397A /* Info.plist */,
+				9A79E1D71C300BBA00E0397A /* LoginViewController.swift */,
+				9A79E1D91C300BD100E0397A /* SignupViewController.swift */,
 			);
 			path = HealthcareToy;
 			sourceTree = "<group>";
@@ -257,7 +263,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9A79E1D81C300BBA00E0397A /* LoginViewController.swift in Sources */,
 				9A79E1AC1C3001A800E0397A /* ViewController.swift in Sources */,
+				9A79E1DA1C300BD100E0397A /* SignupViewController.swift in Sources */,
 				9A79E1AA1C3001A800E0397A /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
