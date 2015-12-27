@@ -12,14 +12,14 @@ class SignupViewController: UIViewController {
     @IBOutlet weak var txtUsername: UITextField!
     @IBOutlet weak var txtPassword: UITextField!
     @IBOutlet weak var txtConfirmPassword: UITextField!
-
+    
     @IBAction func signupTapped(sender: AnyObject) {
         let username:NSString = txtUsername.text!
         let password:NSString = txtPassword.text!
         let confirm_password:NSString = txtConfirmPassword.text!
         
         if ( username.isEqualToString("") || password.isEqualToString("") ) {
-            let alertView = UIAlertController(title: "Sign in Failed",message: "Please enter Username and Password",              preferredStyle: .Alert)
+            let alertView = UIAlertController(title: "Sign in Failed",message: "Please enter Username and Password", preferredStyle: .Alert)
             let okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.Default) { action in }
             alertView.addAction(okAction)
             self.presentViewController(alertView, animated: true) { }
@@ -30,12 +30,12 @@ class SignupViewController: UIViewController {
             self.presentViewController(alertView, animated: true) { }
         } else {
             do {
-                
-                let post:NSString = "username=\(username)&password=\(password)&c_password=\(confirm_password)"
+                let post:NSString = "login=\(username)&password=\(password)&password_again=\(confirm_password)"
+//                let post:NSString = "username=\(username)&password=\(password)&c_password=\(confirm_password)"
                 
                 NSLog("PostData: %@",post);
                 
-                let url:NSURL = NSURL(string: "https://dipinkrishna.com/jsonsignup.php")!
+                let url:NSURL = NSURL(string:"http://localhost:9000/join_mobile")!
                 
                 let postData:NSData = post.dataUsingEncoding(NSASCIIStringEncoding)!
                 
@@ -127,24 +127,24 @@ class SignupViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-
+    
     /*
     // MARK: - Navigation
-
+    
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    // Get the new view controller using segue.destinationViewController.
+    // Pass the selected object to the new view controller.
     }
     */
-
+    
 }

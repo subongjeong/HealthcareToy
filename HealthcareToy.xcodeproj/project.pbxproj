@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9A0F15181C305269004811C3 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0F15171C305269004811C3 /* SettingViewController.swift */; };
 		9A79E1AA1C3001A800E0397A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A79E1A91C3001A800E0397A /* AppDelegate.swift */; };
 		9A79E1AC1C3001A800E0397A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A79E1AB1C3001A800E0397A /* ViewController.swift */; };
 		9A79E1AF1C3001A800E0397A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A79E1AD1C3001A800E0397A /* Main.storyboard */; };
@@ -36,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9A0F15171C305269004811C3 /* SettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		9A79E1A61C3001A800E0397A /* HealthcareToy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HealthcareToy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A79E1A91C3001A800E0397A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9A79E1AB1C3001A800E0397A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -109,6 +111,7 @@
 				9A79E1B51C3001A800E0397A /* Info.plist */,
 				9A79E1D71C300BBA00E0397A /* LoginViewController.swift */,
 				9A79E1D91C300BD100E0397A /* SignupViewController.swift */,
+				9A0F15171C305269004811C3 /* SettingViewController.swift */,
 			);
 			path = HealthcareToy;
 			sourceTree = "<group>";
@@ -263,6 +266,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9A0F15181C305269004811C3 /* SettingViewController.swift in Sources */,
 				9A79E1D81C300BBA00E0397A /* LoginViewController.swift in Sources */,
 				9A79E1AC1C3001A800E0397A /* ViewController.swift in Sources */,
 				9A79E1DA1C300BD100E0397A /* SignupViewController.swift in Sources */,
@@ -495,6 +499,7 @@
 				9A79E1D01C3001A800E0397A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9A79E1D11C3001A800E0397A /* Build configuration list for PBXNativeTarget "HealthcareToyTests" */ = {
 			isa = XCConfigurationList;
@@ -503,6 +508,7 @@
 				9A79E1D31C3001A800E0397A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9A79E1D41C3001A800E0397A /* Build configuration list for PBXNativeTarget "HealthcareToyUITests" */ = {
 			isa = XCConfigurationList;
@@ -511,6 +517,7 @@
 				9A79E1D61C3001A800E0397A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

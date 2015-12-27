@@ -7,13 +7,15 @@
 //
 
 import UIKit
+import HealthKit
 
 class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationController?.hidesBarsOnTap = true
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        let healthStore = HKHealthStore()
         
         
     }
@@ -24,7 +26,7 @@ class ViewController: UIViewController {
         if (isLoggedIn != 1) {
             self.performSegueWithIdentifier("goto_login", sender: self)
         } else {
-//            self.usernameLabel.text = prefs.valueForKey("USERNAME") as? String
+            //            self.usernameLabel.text = prefs.valueForKey("USERNAME") as? String
         }
     }
     
@@ -33,6 +35,10 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func settingTapped(sender: UIButton) {
+    
+    }
+        
     @IBAction func logoutTapped(sender: UIButton) {
         let appDomain = NSBundle.mainBundle().bundleIdentifier
         NSUserDefaults.standardUserDefaults().removePersistentDomainForName(appDomain!)

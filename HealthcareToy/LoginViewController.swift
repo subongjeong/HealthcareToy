@@ -17,19 +17,21 @@ class LoginViewController: UIViewController {
         let password:NSString = txtPassword.text!
         
         if ( username.isEqualToString("") || password.isEqualToString("") ) {
-            let alertView = UIAlertController(title: "Sign in Failed",message: "Please enter Username and Password",              preferredStyle: .Alert)
+            let alertView = UIAlertController(title: "Sign in Failed",message: "Please enter Username and Password", preferredStyle: .Alert)
             let okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.Default) { action in }
             alertView.addAction(okAction)
             self.presentViewController(alertView, animated: true) { }
         } else {
             
             do {
-                let post:NSString = "username=\(username)&password=\(password)"
+                let post:NSString = "login=\(username)&password=\(password)&type=\(0)&state=\(0)"
                 
                 NSLog("PostData: %@",post);
                 
-                let url:NSURL = NSURL(string:"https://dipinkrishna.com/jsonlogin2.php")!
+//                let url:NSURL = NSURL(string:"http://ec2-52-68-243-230.ap-northeast-1.compute.amazonaws.com:9000/login_mobile")!
                 
+                                let url:NSURL = NSURL(string:"http://localhost:9000/login_mobile")!
+              
                 let postData:NSData = post.dataUsingEncoding(NSASCIIStringEncoding)!
                 
                 let postLength:NSString = String( postData.length )
