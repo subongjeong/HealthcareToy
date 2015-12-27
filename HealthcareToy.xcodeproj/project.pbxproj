@@ -1,0 +1,505 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9A79E1AA1C3001A800E0397A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A79E1A91C3001A800E0397A /* AppDelegate.swift */; };
+		9A79E1AC1C3001A800E0397A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A79E1AB1C3001A800E0397A /* ViewController.swift */; };
+		9A79E1AF1C3001A800E0397A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A79E1AD1C3001A800E0397A /* Main.storyboard */; };
+		9A79E1B11C3001A800E0397A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9A79E1B01C3001A800E0397A /* Assets.xcassets */; };
+		9A79E1B41C3001A800E0397A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A79E1B21C3001A800E0397A /* LaunchScreen.storyboard */; };
+		9A79E1BF1C3001A800E0397A /* HealthcareToyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A79E1BE1C3001A800E0397A /* HealthcareToyTests.swift */; };
+		9A79E1CA1C3001A800E0397A /* HealthcareToyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A79E1C91C3001A800E0397A /* HealthcareToyUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		9A79E1BB1C3001A800E0397A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9A79E19E1C3001A800E0397A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9A79E1A51C3001A800E0397A;
+			remoteInfo = HealthcareToy;
+		};
+		9A79E1C61C3001A800E0397A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9A79E19E1C3001A800E0397A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9A79E1A51C3001A800E0397A;
+			remoteInfo = HealthcareToy;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		9A79E1A61C3001A800E0397A /* HealthcareToy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HealthcareToy.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9A79E1A91C3001A800E0397A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		9A79E1AB1C3001A800E0397A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		9A79E1AE1C3001A800E0397A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		9A79E1B01C3001A800E0397A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9A79E1B31C3001A800E0397A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		9A79E1B51C3001A800E0397A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9A79E1BA1C3001A800E0397A /* HealthcareToyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HealthcareToyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9A79E1BE1C3001A800E0397A /* HealthcareToyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthcareToyTests.swift; sourceTree = "<group>"; };
+		9A79E1C01C3001A800E0397A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9A79E1C51C3001A800E0397A /* HealthcareToyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HealthcareToyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9A79E1C91C3001A800E0397A /* HealthcareToyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthcareToyUITests.swift; sourceTree = "<group>"; };
+		9A79E1CB1C3001A800E0397A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9A79E1A31C3001A800E0397A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9A79E1B71C3001A800E0397A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9A79E1C21C3001A800E0397A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9A79E19D1C3001A800E0397A = {
+			isa = PBXGroup;
+			children = (
+				9A79E1A81C3001A800E0397A /* HealthcareToy */,
+				9A79E1BD1C3001A800E0397A /* HealthcareToyTests */,
+				9A79E1C81C3001A800E0397A /* HealthcareToyUITests */,
+				9A79E1A71C3001A800E0397A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		9A79E1A71C3001A800E0397A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9A79E1A61C3001A800E0397A /* HealthcareToy.app */,
+				9A79E1BA1C3001A800E0397A /* HealthcareToyTests.xctest */,
+				9A79E1C51C3001A800E0397A /* HealthcareToyUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9A79E1A81C3001A800E0397A /* HealthcareToy */ = {
+			isa = PBXGroup;
+			children = (
+				9A79E1A91C3001A800E0397A /* AppDelegate.swift */,
+				9A79E1AB1C3001A800E0397A /* ViewController.swift */,
+				9A79E1AD1C3001A800E0397A /* Main.storyboard */,
+				9A79E1B01C3001A800E0397A /* Assets.xcassets */,
+				9A79E1B21C3001A800E0397A /* LaunchScreen.storyboard */,
+				9A79E1B51C3001A800E0397A /* Info.plist */,
+			);
+			path = HealthcareToy;
+			sourceTree = "<group>";
+		};
+		9A79E1BD1C3001A800E0397A /* HealthcareToyTests */ = {
+			isa = PBXGroup;
+			children = (
+				9A79E1BE1C3001A800E0397A /* HealthcareToyTests.swift */,
+				9A79E1C01C3001A800E0397A /* Info.plist */,
+			);
+			path = HealthcareToyTests;
+			sourceTree = "<group>";
+		};
+		9A79E1C81C3001A800E0397A /* HealthcareToyUITests */ = {
+			isa = PBXGroup;
+			children = (
+				9A79E1C91C3001A800E0397A /* HealthcareToyUITests.swift */,
+				9A79E1CB1C3001A800E0397A /* Info.plist */,
+			);
+			path = HealthcareToyUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9A79E1A51C3001A800E0397A /* HealthcareToy */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9A79E1CE1C3001A800E0397A /* Build configuration list for PBXNativeTarget "HealthcareToy" */;
+			buildPhases = (
+				9A79E1A21C3001A800E0397A /* Sources */,
+				9A79E1A31C3001A800E0397A /* Frameworks */,
+				9A79E1A41C3001A800E0397A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HealthcareToy;
+			productName = HealthcareToy;
+			productReference = 9A79E1A61C3001A800E0397A /* HealthcareToy.app */;
+			productType = "com.apple.product-type.application";
+		};
+		9A79E1B91C3001A800E0397A /* HealthcareToyTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9A79E1D11C3001A800E0397A /* Build configuration list for PBXNativeTarget "HealthcareToyTests" */;
+			buildPhases = (
+				9A79E1B61C3001A800E0397A /* Sources */,
+				9A79E1B71C3001A800E0397A /* Frameworks */,
+				9A79E1B81C3001A800E0397A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9A79E1BC1C3001A800E0397A /* PBXTargetDependency */,
+			);
+			name = HealthcareToyTests;
+			productName = HealthcareToyTests;
+			productReference = 9A79E1BA1C3001A800E0397A /* HealthcareToyTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		9A79E1C41C3001A800E0397A /* HealthcareToyUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9A79E1D41C3001A800E0397A /* Build configuration list for PBXNativeTarget "HealthcareToyUITests" */;
+			buildPhases = (
+				9A79E1C11C3001A800E0397A /* Sources */,
+				9A79E1C21C3001A800E0397A /* Frameworks */,
+				9A79E1C31C3001A800E0397A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9A79E1C71C3001A800E0397A /* PBXTargetDependency */,
+			);
+			name = HealthcareToyUITests;
+			productName = HealthcareToyUITests;
+			productReference = 9A79E1C51C3001A800E0397A /* HealthcareToyUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9A79E19E1C3001A800E0397A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = "Subong Jeong";
+				TargetAttributes = {
+					9A79E1A51C3001A800E0397A = {
+						CreatedOnToolsVersion = 7.2;
+					};
+					9A79E1B91C3001A800E0397A = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = 9A79E1A51C3001A800E0397A;
+					};
+					9A79E1C41C3001A800E0397A = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = 9A79E1A51C3001A800E0397A;
+					};
+				};
+			};
+			buildConfigurationList = 9A79E1A11C3001A800E0397A /* Build configuration list for PBXProject "HealthcareToy" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 9A79E19D1C3001A800E0397A;
+			productRefGroup = 9A79E1A71C3001A800E0397A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9A79E1A51C3001A800E0397A /* HealthcareToy */,
+				9A79E1B91C3001A800E0397A /* HealthcareToyTests */,
+				9A79E1C41C3001A800E0397A /* HealthcareToyUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9A79E1A41C3001A800E0397A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9A79E1B41C3001A800E0397A /* LaunchScreen.storyboard in Resources */,
+				9A79E1B11C3001A800E0397A /* Assets.xcassets in Resources */,
+				9A79E1AF1C3001A800E0397A /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9A79E1B81C3001A800E0397A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9A79E1C31C3001A800E0397A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9A79E1A21C3001A800E0397A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9A79E1AC1C3001A800E0397A /* ViewController.swift in Sources */,
+				9A79E1AA1C3001A800E0397A /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9A79E1B61C3001A800E0397A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9A79E1BF1C3001A800E0397A /* HealthcareToyTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9A79E1C11C3001A800E0397A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9A79E1CA1C3001A800E0397A /* HealthcareToyUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9A79E1BC1C3001A800E0397A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9A79E1A51C3001A800E0397A /* HealthcareToy */;
+			targetProxy = 9A79E1BB1C3001A800E0397A /* PBXContainerItemProxy */;
+		};
+		9A79E1C71C3001A800E0397A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9A79E1A51C3001A800E0397A /* HealthcareToy */;
+			targetProxy = 9A79E1C61C3001A800E0397A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		9A79E1AD1C3001A800E0397A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9A79E1AE1C3001A800E0397A /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		9A79E1B21C3001A800E0397A /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9A79E1B31C3001A800E0397A /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		9A79E1CC1C3001A800E0397A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		9A79E1CD1C3001A800E0397A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9A79E1CF1C3001A800E0397A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = HealthcareToy/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = store756.HealthcareToy;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		9A79E1D01C3001A800E0397A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = HealthcareToy/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = store756.HealthcareToy;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		9A79E1D21C3001A800E0397A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = HealthcareToyTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = store756.HealthcareToyTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HealthcareToy.app/HealthcareToy";
+			};
+			name = Debug;
+		};
+		9A79E1D31C3001A800E0397A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = HealthcareToyTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = store756.HealthcareToyTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HealthcareToy.app/HealthcareToy";
+			};
+			name = Release;
+		};
+		9A79E1D51C3001A800E0397A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = HealthcareToyUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = store756.HealthcareToyUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = HealthcareToy;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		9A79E1D61C3001A800E0397A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = HealthcareToyUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = store756.HealthcareToyUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = HealthcareToy;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9A79E1A11C3001A800E0397A /* Build configuration list for PBXProject "HealthcareToy" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9A79E1CC1C3001A800E0397A /* Debug */,
+				9A79E1CD1C3001A800E0397A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9A79E1CE1C3001A800E0397A /* Build configuration list for PBXNativeTarget "HealthcareToy" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9A79E1CF1C3001A800E0397A /* Debug */,
+				9A79E1D01C3001A800E0397A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		9A79E1D11C3001A800E0397A /* Build configuration list for PBXNativeTarget "HealthcareToyTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9A79E1D21C3001A800E0397A /* Debug */,
+				9A79E1D31C3001A800E0397A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		9A79E1D41C3001A800E0397A /* Build configuration list for PBXNativeTarget "HealthcareToyUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9A79E1D51C3001A800E0397A /* Debug */,
+				9A79E1D61C3001A800E0397A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9A79E19E1C3001A800E0397A /* Project object */;
+}
