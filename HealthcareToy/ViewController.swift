@@ -13,7 +13,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationController?.hidesBarsOnTap = true
+      //  navigationController?.hidesBarsOnTap = true
         
         let healthStore = HKHealthStore()
         
@@ -35,10 +35,6 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func settingTapped(sender: UIButton) {
-    
-    }
-        
     @IBAction func logoutTapped(sender: UIButton) {
         let appDomain = NSBundle.mainBundle().bundleIdentifier
         NSUserDefaults.standardUserDefaults().removePersistentDomainForName(appDomain!)

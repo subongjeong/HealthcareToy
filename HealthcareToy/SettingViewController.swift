@@ -12,8 +12,12 @@ class SettingViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
     @IBOutlet weak var picker: UIPickerView!
     @IBOutlet weak var goalData: UILabel!
     @IBOutlet weak var dataSelect: UILabel!
-    
+    @IBOutlet weak var stepper: UIStepper!
     var pickerData: [String] = [String]()
+    
+    @IBAction func stepperAction(sender: AnyObject) {
+        goalData.text = "\(Int(stepper.value))"
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,10 +25,9 @@ class SettingViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
         self.picker.delegate = self
         self.picker.dataSource = self
         pickerData = ["Step Counts", "Sleep Times"]
-    }
-    
-    @IBAction func backTapped(sender: UIButton) {
-        self.dismissViewControllerAnimated(true, completion: nil)
+        
+        goalData.text = "\(Int(stepper.value))"
+        dataSelect.text = pickerData[0]
     }
     
     override func didReceiveMemoryWarning() {

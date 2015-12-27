@@ -80,6 +80,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9A0F15191C30730A004811C3 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
 		9A79E19D1C3001A800E0397A = {
 			isa = PBXGroup;
 			children = (
@@ -103,6 +110,7 @@
 		9A79E1A81C3001A800E0397A /* HealthcareToy */ = {
 			isa = PBXGroup;
 			children = (
+				9A0F15191C30730A004811C3 /* Images */,
 				9A79E1A91C3001A800E0397A /* AppDelegate.swift */,
 				9A79E1AB1C3001A800E0397A /* ViewController.swift */,
 				9A79E1AD1C3001A800E0397A /* Main.storyboard */,
