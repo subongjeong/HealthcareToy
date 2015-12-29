@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		9A0F15181C305269004811C3 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0F15171C305269004811C3 /* SettingViewController.swift */; };
+		9A12C0331C323B3600985F3B /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A12C02E1C323B1D00985F3B /* Charts.framework */; };
+		9A12C0341C323B3600985F3B /* Charts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9A12C02E1C323B1D00985F3B /* Charts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		9A79E1AA1C3001A800E0397A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A79E1A91C3001A800E0397A /* AppDelegate.swift */; };
 		9A79E1AC1C3001A800E0397A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A79E1AB1C3001A800E0397A /* ViewController.swift */; };
 		9A79E1AF1C3001A800E0397A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A79E1AD1C3001A800E0397A /* Main.storyboard */; };
@@ -20,6 +22,34 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		9A12C02D1C323B1D00985F3B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9A12C0271C323B1D00985F3B /* Charts.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 5BA8EC401A9D14DC00CE82E1;
+			remoteInfo = "Charts-iOS";
+		};
+		9A12C02F1C323B1D00985F3B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9A12C0271C323B1D00985F3B /* Charts.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = A52C5C371BAC5CA400594CDD;
+			remoteInfo = "Charts-TV";
+		};
+		9A12C0311C323B1D00985F3B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9A12C0271C323B1D00985F3B /* Charts.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 06AEE7A21BDC3F8B009875AE;
+			remoteInfo = ChartsTests;
+		};
+		9A12C0351C323B3600985F3B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9A12C0271C323B1D00985F3B /* Charts.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 5BA8EC3F1A9D14DC00CE82E1;
+			remoteInfo = "Charts-iOS";
+		};
 		9A79E1BB1C3001A800E0397A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 9A79E19E1C3001A800E0397A /* Project object */;
@@ -36,8 +66,23 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		9A12C0371C323B3600985F3B /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				9A12C0341C323B3600985F3B /* Charts.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		9A0F15171C305269004811C3 /* SettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		9A12C0271C323B1D00985F3B /* Charts.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Charts.xcodeproj; path = "../../../Downloads/ios-charts/Charts/Charts.xcodeproj"; sourceTree = "<group>"; };
 		9A79E1A61C3001A800E0397A /* HealthcareToy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HealthcareToy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A79E1A91C3001A800E0397A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9A79E1AB1C3001A800E0397A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -60,6 +105,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9A12C0331C323B3600985F3B /* Charts.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -87,6 +133,16 @@
 			name = Images;
 			sourceTree = "<group>";
 		};
+		9A12C0281C323B1D00985F3B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9A12C02E1C323B1D00985F3B /* Charts.framework */,
+				9A12C0301C323B1D00985F3B /* Charts.framework */,
+				9A12C0321C323B1D00985F3B /* ChartsTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		9A79E19D1C3001A800E0397A = {
 			isa = PBXGroup;
 			children = (
@@ -94,6 +150,7 @@
 				9A79E1BD1C3001A800E0397A /* HealthcareToyTests */,
 				9A79E1C81C3001A800E0397A /* HealthcareToyUITests */,
 				9A79E1A71C3001A800E0397A /* Products */,
+				9A12C0271C323B1D00985F3B /* Charts.xcodeproj */,
 			);
 			sourceTree = "<group>";
 		};
@@ -152,10 +209,12 @@
 				9A79E1A21C3001A800E0397A /* Sources */,
 				9A79E1A31C3001A800E0397A /* Frameworks */,
 				9A79E1A41C3001A800E0397A /* Resources */,
+				9A12C0371C323B3600985F3B /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				9A12C0361C323B3600985F3B /* PBXTargetDependency */,
 			);
 			name = HealthcareToy;
 			productName = HealthcareToy;
@@ -233,6 +292,12 @@
 			mainGroup = 9A79E19D1C3001A800E0397A;
 			productRefGroup = 9A79E1A71C3001A800E0397A /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 9A12C0281C323B1D00985F3B /* Products */;
+					ProjectRef = 9A12C0271C323B1D00985F3B /* Charts.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				9A79E1A51C3001A800E0397A /* HealthcareToy */,
@@ -241,6 +306,30 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		9A12C02E1C323B1D00985F3B /* Charts.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Charts.framework;
+			remoteRef = 9A12C02D1C323B1D00985F3B /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		9A12C0301C323B1D00985F3B /* Charts.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Charts.framework;
+			remoteRef = 9A12C02F1C323B1D00985F3B /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		9A12C0321C323B1D00985F3B /* ChartsTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = ChartsTests.xctest;
+			remoteRef = 9A12C0311C323B1D00985F3B /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		9A79E1A41C3001A800E0397A /* Resources */ = {
@@ -301,6 +390,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		9A12C0361C323B3600985F3B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Charts-iOS";
+			targetProxy = 9A12C0351C323B3600985F3B /* PBXContainerItemProxy */;
+		};
 		9A79E1BC1C3001A800E0397A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 9A79E1A51C3001A800E0397A /* HealthcareToy */;
@@ -419,6 +513,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = HealthcareToy/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = store756.HealthcareToy;
@@ -432,6 +527,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = HealthcareToy/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = store756.HealthcareToy;
