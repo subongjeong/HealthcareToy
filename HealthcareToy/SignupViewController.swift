@@ -31,11 +31,12 @@ class SignupViewController: UIViewController {
         } else {
             do {
                 let post:NSString = "login=\(username)&password=\(password)&password_again=\(confirm_password)"
-//                let post:NSString = "username=\(username)&password=\(password)&c_password=\(confirm_password)"
+                //                let post:NSString = "username=\(username)&password=\(password)&c_password=\(confirm_password)"
                 
                 NSLog("PostData: %@",post);
                 
-                let url:NSURL = NSURL(string:"http://localhost:9000/join_mobile")!
+                let url:NSURL = NSURL(string:"http://ec2-52-68-243-230.ap-northeast-1.compute.amazonaws.com:9000/join_mobile")!
+                //                let url:NSURL = NSURL(string:"http://localhost:9000/join_mobile")!
                 
                 let postData:NSData = post.dataUsingEncoding(NSASCIIStringEncoding)!
                 

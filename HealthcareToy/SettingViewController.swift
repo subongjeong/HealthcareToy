@@ -14,25 +14,28 @@ class SettingViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
     @IBOutlet weak var dataSelect: UILabel!
     @IBOutlet weak var stepper: UIStepper!
     var pickerData: [String] = [String]()
-    
-    @IBAction func stepperAction(sender: AnyObject) {
-        goalData.text = "\(Int(stepper.value))"
-    }
+    var nsObj = NSUserDefaults.standardUserDefaults()
     
     override func viewDidLoad() {
+        stepper.value = Double(nsObj.integerForKey("goal"))
         super.viewDidLoad()
         
         self.picker.delegate = self
         self.picker.dataSource = self
         pickerData = ["Step Counts", "Sleep Times"]
         
-        goalData.text = "\(Int(stepper.value))"
+        goalData.text = "\(nsObj.integerForKey("goal"))"
         dataSelect.text = pickerData[0]
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    @IBAction func stepperAction(sender: AnyObject) {
+        nsObj.setInteger(Int(stepper.value), forKey: "goal")
+        goalData.text = "\(nsObj.integerForKey("goal"))"
     }
     
     // The number of columns of data
@@ -47,6 +50,7 @@ class SettingViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
     
     // The data to return for the row and component (column) that's being passed in
     func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        //        nsObj
         return pickerData[row]
     }
     
