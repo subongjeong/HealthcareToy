@@ -13,6 +13,7 @@ class SettingViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
     @IBOutlet weak var goalData: UILabel!
     @IBOutlet weak var dataSelect: UILabel!
     @IBOutlet weak var stepper: UIStepper!
+    
     var pickerData: [String] = [String]()
     var nsObj = NSUserDefaults.standardUserDefaults()
     
@@ -26,6 +27,14 @@ class SettingViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
         
         goalData.text = "\(nsObj.integerForKey("goal"))"
         dataSelect.text = pickerData[0]
+    }
+    
+    //자동으로 생성되는 백버튼을 누르면 이 함수가 실행이 된다.
+    //즉, < Back 버튼을 누를 때 실행되는 것들이다.
+    override func viewWillDisappear(animated: Bool) {
+        let vc = ViewController()
+        vc.goal = self.stepper.value
+        print(self.stepper.value)
     }
     
     override func didReceiveMemoryWarning() {

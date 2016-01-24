@@ -19,6 +19,19 @@
 		9A79E1CA1C3001A800E0397A /* HealthcareToyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A79E1C91C3001A800E0397A /* HealthcareToyUITests.swift */; };
 		9A79E1D81C300BBA00E0397A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A79E1D71C300BBA00E0397A /* LoginViewController.swift */; };
 		9A79E1DA1C300BD100E0397A /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A79E1D91C300BD100E0397A /* SignupViewController.swift */; };
+		9A8CAD4F1C53CF54000A2BE3 /* Contents.json in Resources */ = {isa = PBXBuildFile; fileRef = 9A8CAD431C53CF54000A2BE3 /* Contents.json */; };
+		9A8CAD501C53CF54000A2BE3 /* Icon-40.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A8CAD441C53CF54000A2BE3 /* Icon-40.png */; };
+		9A8CAD511C53CF54000A2BE3 /* Icon-40@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A8CAD451C53CF54000A2BE3 /* Icon-40@2x.png */; };
+		9A8CAD521C53CF54000A2BE3 /* Icon-40@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A8CAD461C53CF54000A2BE3 /* Icon-40@3x.png */; };
+		9A8CAD531C53CF54000A2BE3 /* Icon-60@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A8CAD471C53CF54000A2BE3 /* Icon-60@2x.png */; };
+		9A8CAD541C53CF54000A2BE3 /* Icon-60@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A8CAD481C53CF54000A2BE3 /* Icon-60@3x.png */; };
+		9A8CAD551C53CF54000A2BE3 /* Icon-76.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A8CAD491C53CF54000A2BE3 /* Icon-76.png */; };
+		9A8CAD561C53CF54000A2BE3 /* Icon-76@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A8CAD4A1C53CF54000A2BE3 /* Icon-76@2x.png */; };
+		9A8CAD571C53CF54000A2BE3 /* Icon-83.5@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A8CAD4B1C53CF54000A2BE3 /* Icon-83.5@2x.png */; };
+		9A8CAD581C53CF54000A2BE3 /* Icon-Small.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A8CAD4C1C53CF54000A2BE3 /* Icon-Small.png */; };
+		9A8CAD591C53CF54000A2BE3 /* Icon-Small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A8CAD4D1C53CF54000A2BE3 /* Icon-Small@2x.png */; };
+		9A8CAD5A1C53CF54000A2BE3 /* Icon-Small@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A8CAD4E1C53CF54000A2BE3 /* Icon-Small@3x.png */; };
+		9AB524861C4C829D00346773 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AB524851C4C829D00346773 /* HealthKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -98,6 +111,20 @@
 		9A79E1CB1C3001A800E0397A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9A79E1D71C300BBA00E0397A /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		9A79E1D91C300BD100E0397A /* SignupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
+		9A8CAD431C53CF54000A2BE3 /* Contents.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Contents.json; sourceTree = "<group>"; };
+		9A8CAD441C53CF54000A2BE3 /* Icon-40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-40.png"; sourceTree = "<group>"; };
+		9A8CAD451C53CF54000A2BE3 /* Icon-40@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-40@2x.png"; sourceTree = "<group>"; };
+		9A8CAD461C53CF54000A2BE3 /* Icon-40@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-40@3x.png"; sourceTree = "<group>"; };
+		9A8CAD471C53CF54000A2BE3 /* Icon-60@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-60@2x.png"; sourceTree = "<group>"; };
+		9A8CAD481C53CF54000A2BE3 /* Icon-60@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-60@3x.png"; sourceTree = "<group>"; };
+		9A8CAD491C53CF54000A2BE3 /* Icon-76.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-76.png"; sourceTree = "<group>"; };
+		9A8CAD4A1C53CF54000A2BE3 /* Icon-76@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-76@2x.png"; sourceTree = "<group>"; };
+		9A8CAD4B1C53CF54000A2BE3 /* Icon-83.5@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-83.5@2x.png"; sourceTree = "<group>"; };
+		9A8CAD4C1C53CF54000A2BE3 /* Icon-Small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small.png"; sourceTree = "<group>"; };
+		9A8CAD4D1C53CF54000A2BE3 /* Icon-Small@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small@2x.png"; sourceTree = "<group>"; };
+		9A8CAD4E1C53CF54000A2BE3 /* Icon-Small@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small@3x.png"; sourceTree = "<group>"; };
+		9AB524841C4C829D00346773 /* HealthcareToy.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = HealthcareToy.entitlements; sourceTree = "<group>"; };
+		9AB524851C4C829D00346773 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +133,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9A12C0331C323B3600985F3B /* Charts.framework in Frameworks */,
+				9AB524861C4C829D00346773 /* HealthKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -146,6 +174,7 @@
 		9A79E19D1C3001A800E0397A = {
 			isa = PBXGroup;
 			children = (
+				9AB524851C4C829D00346773 /* HealthKit.framework */,
 				9A79E1A81C3001A800E0397A /* HealthcareToy */,
 				9A79E1BD1C3001A800E0397A /* HealthcareToyTests */,
 				9A79E1C81C3001A800E0397A /* HealthcareToyUITests */,
@@ -167,11 +196,13 @@
 		9A79E1A81C3001A800E0397A /* HealthcareToy */ = {
 			isa = PBXGroup;
 			children = (
+				9AB524841C4C829D00346773 /* HealthcareToy.entitlements */,
 				9A0F15191C30730A004811C3 /* Images */,
 				9A79E1A91C3001A800E0397A /* AppDelegate.swift */,
 				9A79E1AB1C3001A800E0397A /* ViewController.swift */,
 				9A79E1AD1C3001A800E0397A /* Main.storyboard */,
 				9A79E1B01C3001A800E0397A /* Assets.xcassets */,
+				9A8CAD421C53CF54000A2BE3 /* AppIcon.appiconset */,
 				9A79E1B21C3001A800E0397A /* LaunchScreen.storyboard */,
 				9A79E1B51C3001A800E0397A /* Info.plist */,
 				9A79E1D71C300BBA00E0397A /* LoginViewController.swift */,
@@ -197,6 +228,25 @@
 				9A79E1CB1C3001A800E0397A /* Info.plist */,
 			);
 			path = HealthcareToyUITests;
+			sourceTree = "<group>";
+		};
+		9A8CAD421C53CF54000A2BE3 /* AppIcon.appiconset */ = {
+			isa = PBXGroup;
+			children = (
+				9A8CAD431C53CF54000A2BE3 /* Contents.json */,
+				9A8CAD441C53CF54000A2BE3 /* Icon-40.png */,
+				9A8CAD451C53CF54000A2BE3 /* Icon-40@2x.png */,
+				9A8CAD461C53CF54000A2BE3 /* Icon-40@3x.png */,
+				9A8CAD471C53CF54000A2BE3 /* Icon-60@2x.png */,
+				9A8CAD481C53CF54000A2BE3 /* Icon-60@3x.png */,
+				9A8CAD491C53CF54000A2BE3 /* Icon-76.png */,
+				9A8CAD4A1C53CF54000A2BE3 /* Icon-76@2x.png */,
+				9A8CAD4B1C53CF54000A2BE3 /* Icon-83.5@2x.png */,
+				9A8CAD4C1C53CF54000A2BE3 /* Icon-Small.png */,
+				9A8CAD4D1C53CF54000A2BE3 /* Icon-Small@2x.png */,
+				9A8CAD4E1C53CF54000A2BE3 /* Icon-Small@3x.png */,
+			);
+			path = AppIcon.appiconset;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -270,6 +320,11 @@
 					9A79E1A51C3001A800E0397A = {
 						CreatedOnToolsVersion = 7.2;
 						DevelopmentTeam = H4C33Z3KZR;
+						SystemCapabilities = {
+							com.apple.HealthKit = {
+								enabled = 1;
+							};
+						};
 					};
 					9A79E1B91C3001A800E0397A = {
 						CreatedOnToolsVersion = 7.2;
@@ -339,6 +394,18 @@
 				9A79E1B41C3001A800E0397A /* LaunchScreen.storyboard in Resources */,
 				9A79E1B11C3001A800E0397A /* Assets.xcassets in Resources */,
 				9A79E1AF1C3001A800E0397A /* Main.storyboard in Resources */,
+				9A8CAD5A1C53CF54000A2BE3 /* Icon-Small@3x.png in Resources */,
+				9A8CAD581C53CF54000A2BE3 /* Icon-Small.png in Resources */,
+				9A8CAD511C53CF54000A2BE3 /* Icon-40@2x.png in Resources */,
+				9A8CAD4F1C53CF54000A2BE3 /* Contents.json in Resources */,
+				9A8CAD571C53CF54000A2BE3 /* Icon-83.5@2x.png in Resources */,
+				9A8CAD561C53CF54000A2BE3 /* Icon-76@2x.png in Resources */,
+				9A8CAD521C53CF54000A2BE3 /* Icon-40@3x.png in Resources */,
+				9A8CAD541C53CF54000A2BE3 /* Icon-60@3x.png in Resources */,
+				9A8CAD551C53CF54000A2BE3 /* Icon-76.png in Resources */,
+				9A8CAD501C53CF54000A2BE3 /* Icon-40.png in Resources */,
+				9A8CAD531C53CF54000A2BE3 /* Icon-60@2x.png in Resources */,
+				9A8CAD591C53CF54000A2BE3 /* Icon-Small@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -512,12 +579,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = HealthcareToy/HealthcareToy.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = HealthcareToy/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = store756.HealthcareToy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -526,12 +596,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = HealthcareToy/HealthcareToy.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = HealthcareToy/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = store756.HealthcareToy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;

@@ -14,21 +14,16 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var pieChart: PieChartView!
     var healthData : [String]!
+    
     var nsMainObj = NSUserDefaults.standardUserDefaults()
-    //    let healthStore = HKHealthStore()
+    var goal : Double?
     
     override func viewDidLoad() {
-        healthData = ["Today","Have to"]
-        let step = 2000.0;
-        let goal = Double(nsMainObj.integerForKey("goal"))
-
         super.viewDidLoad()
-        
-        let unitsSold = [step,goal-step]
-        setChart(healthData, values: unitsSold)
     }
     
-    override func viewDidAppear(animated: Bool) {
+    // 화면이 표시될 때마다 호출되는 메소드
+    override func viewWillAppear(animated: Bool) {
         let prefs:NSUserDefaults = NSUserDefaults.standardUserDefaults()
         let isLoggedIn:Int = prefs.integerForKey("ISLOGGEDIN") as Int
         if (isLoggedIn != 1) {
@@ -36,6 +31,53 @@ class ViewController: UIViewController {
         } else {
             //            self.usernameLabel.text = prefs.valueForKey("USERNAME") as? String
         }
+        
+        
+        //헬스킷 부분
+        let healthStore = HKHealthStore()
+        
+        if let stepsCount = HKQuantityType.quantityTypeForIdentifier(HKQuantityTypeIdentifierStepCount){
+            //권한을 얻는 부분
+            let dataTypesToWrite = Set<HKSampleType>(arrayLiteral: stepsCount)
+            let dataTypesToRead = Set<HKSampleType>(arrayLiteral: stepsCount)
+            
+            healthStore.requestAuthorizationToShareTypes(dataTypesToWrite, readTypes: dataTypesToRead, completion: {(success,error) ->Void in})
+            
+            //총합
+            var endDate = NSDate()
+            endDate = endDate.dateByAddingTimeInterval(60*60*9)
+            
+            let startDate = endDate.dateByAddingTimeInterval(-60*(60*24*1 + Double(7))) // 현재 날짜부터 7일전. 초단위로 계산이 되어 있다.
+            
+            let predicate = HKQuery.predicateForSamplesWithStartDate(startDate,endDate: endDate ,options: .None)
+            let sortDescriptor = NSSortDescriptor(key: HKSampleSortIdentifierEndDate, ascending: true)
+            
+            let query = HKSampleQuery(sampleType: stepsCount, predicate: predicate, limit: 0, sortDescriptors: [sortDescriptor]) { (query, results, error) in
+                
+                if error != nil {
+                    return
+                }
+                
+                var dailyAVG : Double = 0
+                for steps in results as! [HKQuantitySample]
+                {
+                    dailyAVG += steps.quantity.doubleValueForUnit(HKUnit.countUnit())
+                }
+                let step = dailyAVG
+                
+                self.healthData = ["Today","Have to"]
+                self.goal = Double(self.nsMainObj.integerForKey("goal"))
+                let unitsSold = [step,self.goal!-step]
+                self.setChart(self.healthData, values: unitsSold)
+            }
+            healthStore.executeQuery(query)
+        }
+        
+    }
+    
+    
+    override func viewDidAppear(animated: Bool) {
+        
     }
     
     override func didReceiveMemoryWarning() {
@@ -44,10 +86,12 @@ class ViewController: UIViewController {
     }
     
     @IBAction func logoutTapped(sender: UIButton) {
-        Double(nsMainObj.integerForKey("goal"))
+
+        nsMainObj.setInteger(0, forKey: "ISLOGGEDIN")
+        //        Double(nsMainObj.integerForKey("goal"))
         
-        let appDomain = NSBundle.mainBundle().bundleIdentifier
-        NSUserDefaults.standardUserDefaults().removePersistentDomainForName(appDomain!)
+        // let appDomain = NSBundle.mainBundle().bundleIdentifier
+        //   NSUserDefaults.standardUserDefaults().removePersistentDomainForName(appDomain!)
         
         self.performSegueWithIdentifier("goto_login", sender: self)
     }
@@ -69,7 +113,7 @@ class ViewController: UIViewController {
         
         var colors: [UIColor] = []
         
-        for i in 0..<dataPoints.count {
+        for _ in 0..<dataPoints.count {
             let red = Double(arc4random_uniform(256))
             let green = Double(arc4random_uniform(256))
             let blue = Double(arc4random_uniform(256))
