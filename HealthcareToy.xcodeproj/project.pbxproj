@@ -321,7 +321,13 @@
 						CreatedOnToolsVersion = 7.2;
 						DevelopmentTeam = H4C33Z3KZR;
 						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
 							com.apple.HealthKit = {
+								enabled = 1;
+							};
+							com.apple.Push = {
 								enabled = 1;
 							};
 						};

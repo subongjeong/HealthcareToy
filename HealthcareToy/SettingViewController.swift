@@ -9,9 +9,9 @@
 import UIKit
 
 class SettingViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
-    @IBOutlet weak var picker: UIPickerView!
+    var picker = UIPickerView()
+    @IBOutlet weak var cateText: UITextField!
     @IBOutlet weak var goalData: UILabel!
-    @IBOutlet weak var dataSelect: UILabel!
     @IBOutlet weak var stepper: UIStepper!
     
     var pickerData: [String] = [String]()
@@ -19,6 +19,8 @@ class SettingViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
     
     override func viewDidLoad() {
         stepper.value = Double(nsObj.integerForKey("goal"))
+        print(nsObj.integerForKey("category"))
+        
         super.viewDidLoad()
         
         self.picker.delegate = self
@@ -26,16 +28,10 @@ class SettingViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
         pickerData = ["Step Counts", "Sleep Times"]
         
         goalData.text = "\(nsObj.integerForKey("goal"))"
-        dataSelect.text = pickerData[0]
+        cateText.inputView = picker
+        cateText.text = pickerData[nsObj.integerForKey("category")]
     }
     
-    //자동으로 생성되는 백버튼을 누르면 이 함수가 실행이 된다.
-    //즉, < Back 버튼을 누를 때 실행되는 것들이다.
-    override func viewWillDisappear(animated: Bool) {
-        let vc = ViewController()
-        vc.goal = self.stepper.value
-        print(self.stepper.value)
-    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -59,12 +55,13 @@ class SettingViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
     
     // The data to return for the row and component (column) that's being passed in
     func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        //        nsObj
+        nsObj.setInteger(row, forKey: "category")
         return pickerData[row]
     }
     
     func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        dataSelect.text = pickerData[row]
+        nsObj.setInteger(row, forKey: "category")
+        cateText.text = pickerData[row]
     }
     
     /*
