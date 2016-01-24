@@ -17,9 +17,25 @@ class ViewController: UIViewController {
     
     var nsMainObj = NSUserDefaults.standardUserDefaults()
     var goal : Double?
+    let healthStore = HKHealthStore()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if let stepsCount = HKQuantityType.quantityTypeForIdentifier(HKQuantityTypeIdentifierStepCount){
+            //권한을 얻는 부분
+            let dataTypesToWrite = Set<HKSampleType>(arrayLiteral: stepsCount)
+            let dataTypesToRead = Set<HKSampleType>(arrayLiteral: stepsCount)
+            
+            healthStore.requestAuthorizationToShareTypes(dataTypesToWrite, readTypes: dataTypesToRead, completion: {(success,error) ->Void in})
+        }
+        
+        
+        if let sleepType = HKObjectType.categoryTypeForIdentifier(HKCategoryTypeIdentifierSleepAnalysis) {
+            let setType = Set<HKSampleType>(arrayLiteral: sleepType)
+            healthStore.requestAuthorizationToShareTypes(setType, readTypes: setType, completion: { (success, error) -> Void in
+            })
+        }
     }
     
     // 화면이 표시될 때마다 호출되는 메소드
@@ -32,45 +48,67 @@ class ViewController: UIViewController {
             //            self.usernameLabel.text = prefs.valueForKey("USERNAME") as? String
         }
         
-        
-        //헬스킷 부분
-        let healthStore = HKHealthStore()
-        
-        if let stepsCount = HKQuantityType.quantityTypeForIdentifier(HKQuantityTypeIdentifierStepCount){
-            //권한을 얻는 부분
-            let dataTypesToWrite = Set<HKSampleType>(arrayLiteral: stepsCount)
-            let dataTypesToRead = Set<HKSampleType>(arrayLiteral: stepsCount)
-            
-            healthStore.requestAuthorizationToShareTypes(dataTypesToWrite, readTypes: dataTypesToRead, completion: {(success,error) ->Void in})
-            
-            //총합
-            var endDate = NSDate()
-            endDate = endDate.dateByAddingTimeInterval(60*60*9)
-            
-            let startDate = endDate.dateByAddingTimeInterval(-60*(60*24*1 + Double(7))) // 현재 날짜부터 7일전. 초단위로 계산이 되어 있다.
-            
-            let predicate = HKQuery.predicateForSamplesWithStartDate(startDate,endDate: endDate ,options: .None)
-            let sortDescriptor = NSSortDescriptor(key: HKSampleSortIdentifierEndDate, ascending: true)
-            
-            let query = HKSampleQuery(sampleType: stepsCount, predicate: predicate, limit: 0, sortDescriptors: [sortDescriptor]) { (query, results, error) in
+        if(nsMainObj.integerForKey("category") == 0){
+            if let stepsCount = HKQuantityType.quantityTypeForIdentifier(HKQuantityTypeIdentifierStepCount){
                 
-                if error != nil {
-                    return
+                //총합
+                var endDate = NSDate()
+                endDate = endDate.dateByAddingTimeInterval(60*60*9)
+                let startDate = endDate.dateByAddingTimeInterval(-60*(60*24*1 + Double(7))) // 현재 날짜부터 7일전. 초단위로 계산이 되어 있다.
+                
+                let predicate = HKQuery.predicateForSamplesWithStartDate(startDate,endDate: endDate ,options: .None)
+                let sortDescriptor = NSSortDescriptor(key: HKSampleSortIdentifierEndDate, ascending: true)
+                
+                let query = HKSampleQuery(sampleType: stepsCount, predicate: predicate, limit: 0, sortDescriptors: [sortDescriptor]) { (query, results, error) in
+                    
+                    if error != nil {
+                        return
+                    }
+                    
+                    var dailyAVG : Double = 0
+                    for steps in results as! [HKQuantitySample]
+                    {
+                        dailyAVG += steps.quantity.doubleValueForUnit(HKUnit.countUnit())
+                    }
+                    let step = dailyAVG
+                    
+                    self.healthData = ["Today","Have to"]
+                    self.goal = Double(self.nsMainObj.integerForKey("goal"))
+                    let unitsSold = [step,self.goal!-step]
+                    self.setChart(self.healthData, values: unitsSold)
                 }
-                
-                var dailyAVG : Double = 0
-                for steps in results as! [HKQuantitySample]
-                {
-                    dailyAVG += steps.quantity.doubleValueForUnit(HKUnit.countUnit())
-                }
-                let step = dailyAVG
-                
-                self.healthData = ["Today","Have to"]
-                self.goal = Double(self.nsMainObj.integerForKey("goal"))
-                let unitsSold = [step,self.goal!-step]
-                self.setChart(self.healthData, values: unitsSold)
+                healthStore.executeQuery(query)
             }
-            healthStore.executeQuery(query)
+        }else if (nsMainObj.integerForKey("category") == 1) {
+            if let sleepTime = HKObjectType.categoryTypeForIdentifier(HKCategoryTypeIdentifierSleepAnalysis) {
+                var endDate = NSDate()
+                endDate = endDate.dateByAddingTimeInterval(60*60*9)
+                let startDate = endDate.dateByAddingTimeInterval(-60*(60*24*1 + Double(7)))
+                
+                let predicate = HKQuery.predicateForSamplesWithStartDate(startDate, endDate: endDate, options: .None)
+                let sortDescriptor = NSSortDescriptor(key: HKSampleSortIdentifierEndDate, ascending: false)
+                
+                let query = HKSampleQuery(sampleType: sleepTime, predicate: predicate, limit: 0, sortDescriptors: [sortDescriptor]) { (query, tmpResult, error) -> Void in
+                    
+                    if let result = tmpResult {
+                        for item in result {
+                            if let sample = item as? HKCategorySample {
+                                let value = (sample.value == HKCategoryValueSleepAnalysis.InBed.rawValue) ? "InBed" : "Asleep"
+//                                print("sleep: \(sample.startDate) \(sample.endDate) - source: \(sample.source.name) - value: \(value)")
+                                let seconds = sample.endDate.timeIntervalSinceDate(sample.startDate)
+                                let minutes = seconds/60
+                                let hours = minutes/60
+                                
+                                self.healthData = ["Today","Have to"]
+                                self.goal = Double(self.nsMainObj.integerForKey("goal"))
+                                let unitsSold = [hours,self.goal!-hours]
+                                self.setChart(self.healthData, values: unitsSold)
+                            }
+                        }
+                    }
+                }
+                healthStore.executeQuery(query)
+            }
         }
         
     }
@@ -86,7 +124,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func logoutTapped(sender: UIButton) {
-
+        
         nsMainObj.setInteger(0, forKey: "ISLOGGEDIN")
         //        Double(nsMainObj.integerForKey("goal"))
         

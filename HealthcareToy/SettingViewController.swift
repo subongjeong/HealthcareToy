@@ -19,13 +19,28 @@ class SettingViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
     
     override func viewDidLoad() {
         stepper.value = Double(nsObj.integerForKey("goal"))
-        print(nsObj.integerForKey("category"))
         
         super.viewDidLoad()
         
         self.picker.delegate = self
         self.picker.dataSource = self
         pickerData = ["Step Counts", "Sleep Times"]
+        
+        //카테고리별로 스테퍼의 셋팅을 바꿨다.
+        switch(nsObj.integerForKey("category")){
+        case 0:
+            stepper.stepValue = 1000
+            stepper.maximumValue = 50000
+            stepper.minimumValue = 3000
+            break
+        case 1:
+            stepper.stepValue = 1
+            stepper.maximumValue = 24
+            stepper.minimumValue = 1
+            break
+        default:
+            break
+        }
         
         goalData.text = "\(nsObj.integerForKey("goal"))"
         cateText.inputView = picker
@@ -56,11 +71,50 @@ class SettingViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
     // The data to return for the row and component (column) that's being passed in
     func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         nsObj.setInteger(row, forKey: "category")
+        //카테고리별로 스테퍼의 셋팅을 바꿨다.
+        switch(row){
+        case 0:
+            nsObj.setInteger(3000, forKey: "goal")
+            goalData.text = "\(nsObj.integerForKey("goal"))"
+            stepper.stepValue = 1000
+            stepper.maximumValue = 50000
+            stepper.minimumValue = 3000
+            break
+        case 1:
+            nsObj.setInteger(1, forKey: "goal")
+            goalData.text = "\(nsObj.integerForKey("goal"))"
+            stepper.stepValue = 1
+            stepper.maximumValue = 24
+            stepper.minimumValue = 1
+            break
+        default:
+            break
+        }
+        
         return pickerData[row]
     }
     
     func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         nsObj.setInteger(row, forKey: "category")
+        //카테고리별로 스테퍼의 셋팅을 바꿨다.
+        switch(row){
+        case 0:
+            nsObj.setInteger(3000, forKey: "goal")
+            goalData.text = "\(nsObj.integerForKey("goal"))"
+            stepper.stepValue = 1000
+            stepper.maximumValue = 50000
+            stepper.minimumValue = 3000
+            break
+        case 1:
+            nsObj.setInteger(1, forKey: "goal")
+            goalData.text = "\(nsObj.integerForKey("goal"))"
+            stepper.stepValue = 1
+            stepper.maximumValue = 24
+            stepper.minimumValue = 1
+            break
+        default:
+            break
+        }
         cateText.text = pickerData[row]
     }
     
